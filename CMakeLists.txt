@@ -13,15 +13,5 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-
-add_executable(
-  hello_test
-  hello_test.cpp
-)
-target_link_libraries(
-  hello_test
-  GTest::gtest_main
-)
-add_test(NAME hello_test COMMAND hello_test)
-
+add_subdirectory(test)
 enable_testing()
