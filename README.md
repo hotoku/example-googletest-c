@@ -1,8 +1,9 @@
 # googletest を C 言語の単体テストに使う例
 
-2024-11-06 18:14:56 とりあえず、c++の関数をテストするコードを作った。[参考](https://qiita.com/yohm/items/db6597ffb87fa5480cea)
+C++だけで使う分には、[この記事](https://qiita.com/yohm/items/db6597ffb87fa5480cea)を参考にすればOK
 
-- `hello_test.cpp`を test ディレクトリに移動
-- src, include ディレクトリを作成し、その中に c の実装を作成
 
-とすれば、できるはず。
+Cのコードをテストするときに必要な対応。
+
+- `project(プロジェクト名 LANGUAGES CXX C)` ← `C`を追加
+- `set(CMAKE_C_STANDARD 99)` を実行
